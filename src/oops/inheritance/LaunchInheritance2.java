@@ -35,8 +35,7 @@ class Car extends Vehicle{
     }
 
     public void displayCarDetails(){
-        System.out.println("Brand :- "+this.getBrand());
-        System.out.println("Speed -: "+this.getSpeed());
+        super.displayVehicleDetails();
         System.out.println("Fuel Type -: "+this.getFuelType());
     }
 }
