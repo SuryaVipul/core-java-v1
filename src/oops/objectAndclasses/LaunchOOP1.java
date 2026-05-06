@@ -11,9 +11,10 @@ class Student
 	void sleep()
 	{
 		id=4;
+		name = "Surya";
 		int marks=10;
 		System.out.println("Student is sleeping");
-		System.out.println(id + " " + marks);
+		System.out.println(id + " " + name +  " " + marks);
 	}
 	void study()
 	{

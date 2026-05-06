@@ -35,7 +35,7 @@ public class LaunchEncap2 {
 
     public static void main(String[] args) {
         Employee employee1 = new Employee(101,"Surya","Mumbai");
-        Employee employee2 = new Employee(102,"Himanshu","Gurugram");
+        Employee employee2 = new Employee(102,"Jaya","Delhi");
 
         System.out.println("Employee 1 Details");
         employee1.setName("Surya Shukla");

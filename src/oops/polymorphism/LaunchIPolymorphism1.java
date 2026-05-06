@@ -40,7 +40,7 @@ class CommercialPlane extends Aeroplane {
 class Airport {
     public void permit(Aeroplane aero) {
 
-      //  1 : M --> Polymorphism
+      //  1 to Many --> Polymorphism
         aero.takeOff();
         aero.fly();
     }

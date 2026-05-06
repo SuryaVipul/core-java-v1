@@ -95,6 +95,7 @@ public class LaunchEncap1 {
         acc2.deposit(20000);
         acc2.withdraw(4000);
         acc2.transfer(acc1,7000);
+        acc2.withdraw(1000);
         System.out.println("*****************************************");
     }
 }

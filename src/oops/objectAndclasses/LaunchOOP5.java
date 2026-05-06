@@ -37,10 +37,10 @@ class Order {
         return total;
     }
     public void displayOrderDetails() {
-        System.out.println("Order Id -: "+orderId);
+        System.out.println("Order Id -: "+this.orderId);
         System.out.println("Product -: "+product.name);
         System.out.println("Price -: "+product.price);
-        System.out.println("Quantity -: "+quantity);
+        System.out.println("Quantity -: "+this.quantity);
         System.out.println("Total -: "+calculateTotalPrice());
     }
 }

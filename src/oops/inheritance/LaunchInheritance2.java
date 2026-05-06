@@ -45,10 +45,7 @@ public class LaunchInheritance2 {
     Car car1 = new Car("Toyota",180,"Petrol");
     Car car2 = new Car("Tesla",250,"Electric");
     car1.displayCarDetails();
-    car1.displayVehicleDetails();
     System.out.println("----------------------");
     car2.displayCarDetails();
-    car2.displayVehicleDetails();
-
     }
 }

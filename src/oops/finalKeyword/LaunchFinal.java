@@ -7,6 +7,7 @@ package oops.finalKeyword;
     public final void courses() {
        // age = 10; Cannot assign a value to final variable 'age'
         System.out.println("telusko has both live and recorded courses");
+        System.out.println("age is " + age);
     }
 }
 

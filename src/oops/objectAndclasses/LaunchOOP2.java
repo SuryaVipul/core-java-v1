@@ -26,8 +26,9 @@ class Dog
 	
 	void run()
 	{
-		//age=5;
-		
+		int age=5;
+
+		System.out.println("age is this block "+ age);
 		System.out.println("Dog is running");
 		//name="lobo";
 	}

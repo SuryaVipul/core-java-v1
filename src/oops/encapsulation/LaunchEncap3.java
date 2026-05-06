@@ -51,12 +51,12 @@ public class LaunchEncap3 {
         Employee1 employee2 = new Employee1(502,"Vipul",30000,"Backoffice chat Support");
 
         employee1.updateDepartment("IT");
-        employee1.increaseSalary(50000);
+        employee1.increaseSalary(5000);
         employee1.displayEmployeeDetails();
 
 
         employee2.updateDepartment("CA");
-        employee2.increaseSalary(30000);
+        employee2.increaseSalary(3000);
         employee2.displayEmployeeDetails();
 
 

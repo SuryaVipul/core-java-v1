@@ -10,9 +10,10 @@ class Telusko  // extends Object
 class Alpha extends Telusko{
     int age;
 
-    private String name;
+    private String name = "Surya";
     void disp(){
         System.out.println("This is Alpha class");
+        System.out.println(name);
     }
 }
 
@@ -30,10 +31,10 @@ class Beta extends Alpha{
 public class LaunchInheritance3 {
     public static void main(String[] args) {
         Beta beta = new Beta();
+        beta.toString(); // parent class object method called here because of multilevel inheritance
+        // Object is a parent class of all classes in java
         beta.disp();
         beta.show();
         beta.course();
-        beta.toString(); // parent class object method called here because of multilevel inheritance
-                        // Object is a parent class of all classes in java
     }
 }
