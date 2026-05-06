@@ -32,11 +32,6 @@ abstract class Product {
     }
 }
 
-
-
-
-// ELECTRONICS PRODUCT
-
 class ElectronicsProduct extends Product {
     public ElectronicsProduct(int productId, String productName, double originalPrice) {
         super(productId, productName, originalPrice);
