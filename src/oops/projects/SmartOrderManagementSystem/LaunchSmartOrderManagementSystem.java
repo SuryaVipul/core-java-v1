@@ -1,4 +1,4 @@
-package oops.SmartOrderManagementSystem;
+package oops.projects.SmartOrderManagementSystem;
 
 abstract class Product {
   private int productId;
