@@ -2,14 +2,11 @@ package InterviewQuestions;
 
 // Interview Questions -> Java 8 Streams - Lazy Loading, Parallel Streams & More
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-
 
 
 class Employee3 {
@@ -83,5 +80,50 @@ public class LaunchQuestion27 {
         employees.stream().filter((emp) -> emp.getDepartment().equals("Tech"))
                 .map((emp) -> emp.getName())
                 .forEach((name) -> System.out.println(name));
+        System.out.println();
+
+        // use of collect() method
+//        List<String> names = employees.stream().filter((emp) -> emp.getDepartment().equals("Tech"))
+//                .map((emp) -> emp.getName())
+//                        .collect(Collectors.toList());
+//        System.out.println(names);
+
+        // count
+        long count = list.stream()
+                .filter((element) -> element % 2 == 0)
+                .map((elem) -> elem * elem)
+                .count();
+        System.out.println(count);
+
+        System.out.println();
+
+        // findFirst()
+        List<String> nameList = new ArrayList<>(Arrays.asList("Aman","Raj","Rohit","Riya","Rahul","Ankit","Rina","Reshma"));
+        Optional<String> first = nameList.stream().findFirst();
+        System.out.println(first.get());
+
+        Optional<String> first1 = nameList.stream()
+                .filter((str) -> str.startsWith("R"))
+                .findFirst();
+        System.out.println(first1.get());
+
+        // findAny()
+        Optional<String> f = nameList.stream()
+                .findAny();
+        System.out.println(f.get());
+
+        // sorted()
+        List<Integer> numList = new ArrayList<>(Arrays.asList(3,2,-2,45,21,17));
+        numList.stream().sorted()
+                .forEach((num) -> System.out.println(num));
+
+        System.out.println();
+
+        // parallelStream
+
+        nameList.parallelStream().filter((str) -> str.startsWith("R"))
+                .forEach((name) -> System.out.println(name));
+
+
     }
 }
