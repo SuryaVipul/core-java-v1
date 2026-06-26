@@ -79,7 +79,7 @@ public class LaunchQuestion27 {
 
         employees.stream().filter((emp) -> emp.getDepartment().equals("Tech"))
                 .map((emp) -> emp.getName())
-                .forEach((name) -> System.out.println(name));
+                .forEach(System.out :: println);
         System.out.println();
 
         // use of collect() method
