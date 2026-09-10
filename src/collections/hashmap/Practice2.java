@@ -15,7 +15,7 @@ public class Practice2 {
         map.put("key", null);
         System.out.println(map);
 
-        // can we insert duplicate keys ?? The latest value overrides the old value for the same key.
+        // can we insert duplicate keys ?? Yes. The latest value overrides the old value for the same key.
         map.put("fruit", "apple");
         map.put("fruit", "mango");
         System.out.println(map.get("fruit"));
@@ -33,9 +33,11 @@ public class Practice2 {
         // Checking for Existence (containsKey)
         HashMap<String, String> configMap = new HashMap<>();
         configMap.put("db_url", "localhost:3306");
-        if(!(configMap.containsKey("timeout"))) {
-            configMap.put("timeout", "60");
-        }
+        configMap.put("Mac-Address", null);
+        configMap.putIfAbsent("timeout", "60"); // Key does not exist, so the value is inserted
+        configMap.putIfAbsent("db_url", "localhost:3306");  // Key exists, so the value is not inserted
+        configMap.putIfAbsent("db_url", "localhost:8080");  // if key having already a values it will not update.
+        configMap.putIfAbsent("Mac-Address", "CC:46:D6"); // if key having null values it updates the key with its value
         System.out.println(configMap);
 
         //Updating an Existing Value (put or replace)
@@ -44,6 +46,26 @@ public class Practice2 {
         userProfile.put("status", "INACTIVE");
         userProfile.put("status", "ACTIVE");
         System.out.println(userProfile);
+
+        System.out.println();
+        //Iterating over a Map (entrySet or keySet)
+
+        HashMap<Integer, String> httpCodes = new HashMap<>();
+        httpCodes.put(200, "Ok");
+        httpCodes.put(404, "Not Found");
+        httpCodes.put(500, "Interval Server Error");
+
+        for(Map.Entry<Integer,String> entry : httpCodes.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+        // using lambda expression
+        System.out.println();
+        System.out.println("for each with lambda expression over hashmap");
+        httpCodes.forEach((key, value) ->  {
+            System.out.println(key + " " + value);
+        });
+
 
         //5 Best Ways to Iterate Over HashMap in Java
 
@@ -121,7 +143,7 @@ public class Practice2 {
         System.out.println();
         System.out.println("hashCode::");
         for(Map.Entry<String, Integer> entry1 : map1.entrySet()) {
-            System.out.println(entry1.hashCode());
+            System.err.println(entry1.hashCode() + " ");
         }
 
 
@@ -138,8 +160,6 @@ public class Practice2 {
             entry2.setValue(entry2.getValue() + 1000);
         }
         System.out.println(map2);
-
-
 
     }
 
